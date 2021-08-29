@@ -11,15 +11,15 @@ public class Main {
         int counter = 0;
 
         for (double each : array) {
-
-            if (each > 0 && wasNegative) {
-                sum += each;
-                counter++;
-                System.out.println(each);
-            } else {
+            if (each < 0 ){
                 wasNegative = true;
             }
 
+            else if (each > 0 && wasNegative) {
+                 sum += each;
+                counter++;
+                System.out.println(each);
+            }
         }
         System.out.println(sum / counter);
 
